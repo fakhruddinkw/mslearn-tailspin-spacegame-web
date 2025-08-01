@@ -45,4 +45,4 @@ steps:
     inputs:
       command: "build"
       projects: "**/*.csproj"
-      arguments: "--no-restore--configuration $(buildConfiguration)"
+      arguments: "--no-restore --configuration $(buildConfiguration)"
