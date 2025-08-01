@@ -17,7 +17,7 @@ steps:
     displayName: "Use .NET Core SDK"
     inputs:
       packageType: "sdk"
-      version: "6.x"
+      version: "8.x"
 
   - task: Npm@1
     displayName: "Run npm install"
