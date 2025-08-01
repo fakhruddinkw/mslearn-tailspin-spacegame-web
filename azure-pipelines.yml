@@ -34,7 +34,7 @@ steps:
     displayName: "Write build info"
     workingDirectory: Tailspin.SpaceGame.Web/wwwroot
 
-  - task: DotnetCli@2
+  - task: DotnetCoreCli@2
     displayName: "Restore Project"
     inputs:
       command: "restore"
