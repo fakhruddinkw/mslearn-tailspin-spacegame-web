@@ -30,8 +30,9 @@ steps:
     displayName: "Write build info"
     workingDirectory: $(wwwrootDir)
 
-  - task: DotNetCoreCLI@2
-    displayName: "Restore project dependencies"
+
+  - task: DotnetCoreCli@2
+    displayName: "Restore Project"
     inputs:
       command: "restore"
       projects: "**/*.csproj"
@@ -58,8 +59,10 @@ steps:
       projects: "**/*.csproj"
       publishWebProjects: false
       arguments: "--no-build --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/$(buildConfiguration)"
+
       zipAfterPublish: true
 
   - task: PublishBuildArtifacts@1
     displayName: "Publish Artifact: drop"
-    condition: succeeded()
+    condition: "succeeded()"
+
